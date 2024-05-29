@@ -50,6 +50,12 @@ Remember to adjust parameters according to your needs.
 --rho: A parameter for adjusting the intensity of the SSA.
 
 --mi: for density experiment only.
+
+
+## Acknowledgement
+
+Our work stands on the shoulders of giants. It relies on https://github.com/facebookresearch/segment-anything and https://github.com/yuyang-long/SSA.
+
 ## License
 
 The model is licensed under the [Apache 2.0 license](LICENSE).
