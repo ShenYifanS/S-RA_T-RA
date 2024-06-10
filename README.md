@@ -10,13 +10,18 @@ Segment Anything Models (SAM) have made significant advancements in image segmen
   <img src="example.jpg" width="70%" />
 </p>
 
+## <a name="Installation"></a>Installation
+1. The code is tested on `python==3.8` and `pytorch==1.10.0`. Please install as instructed on the website.
+2. Download a [model checkpoint](https://github.com/facebookresearch/segment-anything#model-checkpoints). 
+3. Run
+```
+pip install opencv-python tqdm matplotlib scikit-learn
+```
 
+Note that you don't need to install segment-anything since we have copied their code.
 
 ## <a name="GettingStarted"></a>Getting Started
-
-First, download a [model checkpoint](https://github.com/facebookresearch/segment-anything#model-checkpoints). 
-
-Then the model can be used in just a few lines to get masks from a given prompt:
+The model can be used in just a few lines to get masks from a given prompt:
 
 ```
 bash run0.sh
