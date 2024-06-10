@@ -4,7 +4,7 @@ from torch import nn
 from torch.autograd import Variable as V
 import torch.nn.functional as F
 from Normalize import Normalize
-import pretrainedmodels
+# import pretrainedmodels
 from tqdm import tqdm
 
 
