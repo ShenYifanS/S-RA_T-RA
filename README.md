@@ -14,7 +14,7 @@ Segment Anything Models (SAM) have made significant advancements in image segmen
 
 ## <a name="GettingStarted"></a>Getting Started
 
-First download a [model checkpoint](#model-checkpoints). 
+First, download a [model checkpoint](https://github.com/facebookresearch/segment-anything#model-checkpoints). 
 
 Then the model can be used in just a few lines to get masks from a given prompt:
 
