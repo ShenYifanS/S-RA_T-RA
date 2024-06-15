@@ -59,6 +59,8 @@ Remember to adjust parameters according to your needs.
 
 ## Acknowledgement
 
+We thank [Yinjie Zhang](https://github.com/yjbrucejay) for contributing to early-stage code.
+
 Our work stands on the shoulders of giants. It relies on https://github.com/facebookresearch/segment-anything and https://github.com/yuyang-long/SSA.
 
 ## License
