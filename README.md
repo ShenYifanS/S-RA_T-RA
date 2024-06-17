@@ -2,7 +2,7 @@
 
 Yifan Shen*, Zhengyuan Li*, Gang Wang
 
-[[`Paper`](https://arxiv.org/pdf/2404.08255)]
+[[`Paper`](https://arxiv.org/pdf/2404.08255)] [[`Slides`](https://docs.google.com/presentation/d/1YQd7gnfIjnp9cuxjoz6neIYDT78LqvIiw-V_uCPqJsM/edit?usp=sharing)]
 
 Segment Anything Models (SAM) have made significant advancements in image segmentation, allowing users to segment target portions of an image with a single click (i.e., user prompt). Given its broad applications, the robustness of SAM against adversarial attacks is a critical concern. While recent works have explored adversarial attacks against a pre-defined prompt/click, their threat model is not yet realistic: (1) they often assume the user-click position is known to the attacker (point-based attack), and (2) they often operate under a white-box setting with limited transferability. In this paper, we propose a more practical region-level attack where attackers do not need to know the precise user prompt. The attack remains effective as the user clicks on any point on the target object in the image, hiding the object from SAM. Also, by adapting a spectrum transformation method, we make the attack more transferable under a black-box setting. Both control experiments and testing against real-world SAM services confirm its effectiveness.
 
