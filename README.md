@@ -9,6 +9,7 @@ Segment Anything Models (SAM) have made significant advancements in image segmen
 <p float="left">
   <img src="example.jpg" width="70%" />
 </p>
+The images here are in the folder `examples`.
 
 ## <a name="Installation"></a>Installation
 1. The code is tested on `python==3.8` and `pytorch==1.10.0`. Please install as instructed on the website.
