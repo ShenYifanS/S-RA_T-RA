@@ -1,4 +1,5 @@
 # Practical Region-level Attack against Segment Anything Models
+> This is an adversarial attack against SAM.
 
 Yifan Shen*, Zhengyuan Li*, Gang Wang
 
@@ -22,41 +23,37 @@ pip install opencv-python tqdm matplotlib scikit-learn
 Note that you don't need to install segment-anything since we have copied their code.
 
 ## <a name="GettingStarted"></a>Getting Started
-The model can be used in just a few lines to get masks from a given prompt:
 
 ```
-bash run0.sh
+python quick_test/attack_sample.py --orig_image "example_dataset/example3.jpeg" --sam_model vit_b --checkpoint che
+ckpoints/sam_vit_b_01ec64.pth --box 400,500,300,500 --epsilon 8 --apply_ssa --sam_checkpoint checkpoints/sam_vit_h_4b8939.pth --input_point 450 400  --rho 0.1 --mi -1
 ```
-
-Or you can run any image using following code:
-
-```
-python SSAscripts/attack.py --orig_image "dataset/sa_10550.jpg" --sam_model vit_b --checkpoint checkpoints/sam_vit_b_01ec64.pth --box 694,1436,525,1025 --epsilon 8 --apply_ssa --sam_checkpoint checkpoints/sam_vit_h_4b8939.pth --input_point 1065 775 --result_csv result/B_H_True_0.1_8_50.csv --rho 0.1 --mi -1
-```
+The result will be in `sample/`.
+<details>
+  <summary><b>Parameters</b></summary>
 Remember to adjust parameters according to your needs.
 
---orig_image: Specifies the path to the original image.
++ --orig_image: Specifies the path to the original image.
 
---sam_model: Defines the type of SAM model used. Options might include 'vit_b', 'vit-l' and 'vit-h'.
++ --sam_model: Defines the type of SAM model used. Options might include 'vit_b', 'vit-l' and 'vit-h'.
 
---checkpoint: Path to the pretrained weights for the chosen SAM model. This should match the model specified in --sam_model.
++ --checkpoint: Path to the pretrained weights for the chosen SAM model. This should match the model specified in --sam_model.
 
---box: This parameter defines a bounding box as (minx, maxx, miny, maxy) on the image within which the adversarial perturbation will be applied.
++ --box: This parameter defines a bounding box as (minx, maxx, miny, maxy) on the image within which the adversarial perturbation will be applied.
 
---epsilon: The intensity of the perturbation. Typical values are 2, 4, 8, and 16.
++ --epsilon: The intensity of the perturbation. Typical values are 2, 4, 8, and 16.
 
---apply_ssa: This is a boolean flag of SSA.
++ --apply_ssa: This is a boolean flag of SSA.
 
---sam_checkpoint: Path to another set of pretrained weights for the SAM model that for test.
++ --sam_checkpoint: Path to another set of pretrained weights for the SAM model that for test.
 
---input_point: Coordinates on the image where to attack.
++ --input_point: Coordinates on the image where to attack.
 
---result_csv: Path where saved the results of the attack.
++ --rho: A parameter for adjusting the intensity of the SSA.
 
---rho: A parameter for adjusting the intensity of the SSA.
++ --mi: for density experiment only.
 
---mi: for density experiment only.
-
+</details>
 
 ## Acknowledgement
 
