@@ -73,10 +73,11 @@ The model is licensed under the [Apache 2.0 license](LICENSE).
 If you use Practical Region-level Attack against SAM  in your research, please use the following BibTeX entry.
 
 ```
-@article{shen2024practical,
+@inproceedings{shen2024practical,
   title={Practical Region-level Attack against Segment Anything Models},
   author={Shen, Yifan and Li, Zhengyuan and Wang, Gang},
-  journal={arXiv preprint arXiv:2404.08255},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={194--203},
   year={2024}
 }
 ```
