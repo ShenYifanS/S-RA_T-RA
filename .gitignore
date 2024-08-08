@@ -1,0 +1,4 @@
+*.pth
+sample/
+__pycache__/
+result/
