@@ -9,7 +9,7 @@ from torch.autograd import grad, Variable
 from torch.nn import functional as F
 
 # from parser import args
-from ssa import image_transfer
+from SSAscripts.ssa import image_transfer
 
 
 def pgd(args, predictor, image, input_points, input_label, device, ε, apply_ssa=False,

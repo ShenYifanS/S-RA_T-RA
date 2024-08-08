@@ -3,7 +3,7 @@ import torch
 from torch import nn
 from torch.autograd import Variable as V
 import torch.nn.functional as F
-from Normalize import Normalize
+# from Normalize import Normalize
 # import pretrainedmodels
 from tqdm import tqdm
 
@@ -283,28 +283,3 @@ def image_transfer(predictor, input_points, input_label, images, ε, device, sig
     region = clip_by_tensor(region_idct, 0.0, 255.0)
     x = region
     return x
-        # region_idct = torch.autograd.Variable(region_idct, requires_grad=True)
-        # Calculate SAM loss here
-        # region_idct = region_idct.permute(2, 0, 1).contiguous()[None, :, :, :]
-        # torch.Size([1, 3, 684, 1024]) (534, 800, 3)
-        # print(region_idct.shape, region.shape)
-        # attacks += region_idct
-    # avg_attack = attacks / N
-    # x = avg_attack * 255
-    # x = torch.autograd.Variable(region, requires_grad=True)
-    # region_idct = idct_2d(region_dct * avg_mask)
-    # region_idct = torch.autograd.Variable(region_idct, requires_grad=True)
-    # region = clip_by_tensor(region_idct, 0.0, 1.0)
-
-    ############################################
-
-    # print("regionMax: ", region.max(), " ;regionMin: ", region.min())
-    # region_idct = torch.clamp(region_idct, 0, 255)
-    # region_idct = (region_idct - region_idct.min()) / (region_idct.max() - region_idct.min()) * 255
-
-    # Place the transformed region back into the image
-    # x[scaled_miny:scaled_maxy, scaled_minx:scaled_maxx, :] = region_idct
-    # x = region * 255
-    # print("Max: ", x.max(), " ;Min: ", x.min())
-    # TODO: scale back
-
